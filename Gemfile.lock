@@ -1,0 +1,158 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (7.1.2)
+      base64
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      mutex_m
+      tzinfo (~> 2.0)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    base64 (0.2.0)
+    bigdecimal (3.1.5)
+    builder (3.2.4)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    concurrent-ruby (1.2.2)
+    connection_pool (2.4.1)
+    database_cleaner-core (2.0.1)
+    database_cleaner-sequel (2.0.2)
+      database_cleaner-core (~> 2.0.0)
+      sequel (>= 4.49)
+    dedent (1.0.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    drb (2.2.0)
+      ruby2_keywords
+    equalizer (0.0.11)
+    execjs (2.9.1)
+    factory_bot (6.4.2)
+      activesupport (>= 5.0.0)
+    ffaker (2.23.0)
+    ffi (1.16.3)
+    google-protobuf (3.25.1)
+    grape (1.8.0)
+      activesupport (>= 5)
+      builder
+      dry-types (>= 1.1)
+      mustermann-grape (~> 1.0.0)
+      rack (>= 1.3.0, < 3)
+      rack-accept
+    dry-core (1.0.1)
+      concurrent-ruby (~> 1.0)
+      zeitwerk (~> 2.6)
+    dry-inflector (1.0.0)
+    dry-logic (1.5.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-types (1.7.1)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0)
+      dry-inflector (~> 1.0)
+      dry-logic (~> 1.4)
+      zeitwerk (~> 2.6)
+    hashie (5.0.0)
+    i18n (1.14.1)
+      concurrent-ruby (~> 1.0)
+    ice_nine (0.11.2)
+    jasmine (3.99.0)
+      jasmine-core (~> 3.99.0)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (3.99.1)
+    jsmin (1.0.1)
+    kgio (2.11.4)
+    minitest (5.20.0)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    mustermann-grape (1.0.2)
+      mustermann (>= 1.0.0)
+    mutex_m (0.2.0)
+    pg (1.5.4)
+    phantomjs (2.1.1.0)
+    rack (2.2.8)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
+    rack-protection (3.1.0)
+      rack (~> 2.2, >= 2.2.4)
+    rack-test (2.1.0)
+      rack (>= 1.3)
+    raindrops (0.20.1)
+    rake (13.1.0)
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.2)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.6)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.1)
+    ruby2_keywords (0.0.5)
+    sass-embedded (1.69.5)
+      google-protobuf (~> 3.23)
+      rake (>= 13.0.0)
+    sequel (5.75.0)
+    sinatra (3.1.0)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.1.0)
+      tilt (~> 2.0)
+    sinatra-assetpack (0.3.3)
+      jsmin
+      rack-test
+      sinatra
+      tilt (>= 1.3.0, < 2.0)
+    thread_safe (0.3.6)
+    tilt (1.4.1)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
+    unicorn (6.1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
+    zeitwerk (2.6.12)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  database_cleaner-sequel
+  dedent
+  dotenv
+  factory_bot
+  ffaker
+  grape
+  jasmine
+  pg
+  rack-test
+  rake
+  rspec
+  sass-embedded
+  sequel
+  sinatra
+  sinatra-assetpack
+  uglifier
+  unicorn
+
+RUBY VERSION
+   ruby 3.0.0p0
+
+BUNDLED WITH
+   2.5.23
