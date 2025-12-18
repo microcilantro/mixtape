@@ -1,11 +1,11 @@
-require 'database_cleaner'
+require 'database_cleaner/sequel'  # Updated require path
 
-DatabaseCleaner[:sequel, connection: Sequel::Model.db].strategy = :transaction
+DatabaseCleaner[:sequel, db: Sequel::Model.db].strategy = :transaction
 
 RSpec.configure do |config|
   config.around do |example|
-    DatabaseCleaner[:sequel, connection: Sequel::Model.db].start
+    DatabaseCleaner[:sequel, db: Sequel::Model.db].start
     example.run
-    DatabaseCleaner[:sequel, connection: Sequel::Model.db].clean
+    DatabaseCleaner[:sequel, db: Sequel::Model.db].clean
   end
 end
