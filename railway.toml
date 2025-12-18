@@ -1,0 +1,7 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "bundle exec rake db:migrate && bundle exec unicorn -c ./config/unicorn.rb"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10

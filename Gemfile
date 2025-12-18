@@ -16,7 +16,7 @@ gem 'unicorn'
 
 group :test do
   gem 'database_cleaner'
-  gem 'debugger'
+  gem 'debug'  # Replaced 'debugger' which doesn't work with Ruby 3.2.0
   gem 'factory_girl'
   gem 'ffaker'
   gem 'rack-test'
