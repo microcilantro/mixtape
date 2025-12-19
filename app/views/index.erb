@@ -22,6 +22,14 @@
 
   <!-- our fresh styles -->
   <%= css :app %>
+  
+  <!-- Environment variables passed from server -->
+  <script>
+    // API keys from environment variables (secure!)
+    window.MAPBOX_ACCESS_TOKEN = '<%= ENV['MAPBOX_ACCESS_TOKEN'] || 'codeforamerica.h6mlbj75' %>';
+    window.MAPBOX_STYLE_ID = '<%= ENV['MAPBOX_STYLE_ID'] || 'codeforamerica.h6mlbj75' %>';
+    window.GOOGLE_MAPS_API_KEY = '<%= ENV['GOOGLE_MAPS_API_KEY'] || 'AIzaSyCcgZLlBTM4GY0RhkUjy4MDD9RaZ0zIoiY' %>';
+  </script>
 </head>
 <body>
   <div id="map"></div>

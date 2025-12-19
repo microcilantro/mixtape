@@ -13,8 +13,11 @@ app.utils.getRoute = function(latlngs, callback, context) {
   if (latlngs.via) waypoints.splice(1, 0, latlngs.via);
   waypoints = waypoints.map(flip).join(';');
 
-  var url = 'http://api.tiles.mapbox.com/v3/codeforamerica.h6mlbj75/' +
-  'directions/driving/' + waypoints + '.json?geometry=polyline';
+  // Use MAPBOX_STYLE_ID from environment variable (injected by server)
+  var mapboxStyleId = window.MAPBOX_STYLE_ID || 'mapbox/streets-v11';
+  
+  var url = 'http://api.tiles.mapbox.com/v3/' + mapboxStyleId +
+  '/directions/driving/' + waypoints + '.json?geometry=polyline';
 
   $.getJSON(url, function(response) {
     if (response.error || response.routes.length === 0) {

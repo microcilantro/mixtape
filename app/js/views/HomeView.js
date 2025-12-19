@@ -17,9 +17,10 @@ app.HomeView = Backbone.View.extend({
     var city = $('.homeCity').html();
     if (!city) return;
 
-    // Use the Google Maps Geocoding API
+    // Use Google Maps Geocoding API with key from environment variable
+    var apiKey = window.GOOGLE_MAPS_API_KEY || '';
     var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
-    encodeURI(city) + '&sensor=false&key=AIzaSyBDKtwlYYDChsxLDsbAeL73NPfhQD1Gnck';
+    encodeURI(city) + '&sensor=false&key=' + apiKey;
 
     $.get(url, function(response) {
       if (response.results.length === 0) {

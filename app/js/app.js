@@ -7,8 +7,11 @@ _.templateSettings = {
 };
 
 $(document).ready(function() {
+  // Use MAPBOX_STYLE_ID from environment variable (injected by server)
+  var mapboxStyleId = window.MAPBOX_STYLE_ID || 'mapbox/streets-v11';
+  
   var options = { tileLayer: { detectRetina: true } };
-  app.leaflet = L.mapbox.map('map', 'pk.eyJ1IjoiZ2hld2l0dCIsImEiOiJjbGJkOHV0NDcwMjlvNDFtejVjZzZrbzNvIn0.66yJSxG8vmOwX2UpQd4Pag', options);
+  app.leaflet = L.mapbox.map('map', mapboxStyleId, options);
   
   // Feedback View that we want visible at all times
   var feedbackView = new app.FeedbackView();
