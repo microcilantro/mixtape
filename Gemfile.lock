@@ -68,8 +68,9 @@ GEM
     jasmine (3.99.0)
       jasmine-core (~> 3.99.0)
       phantomjs
-      rack (>= 1.2.1)
+      rack (>= 2.1.4)
       rake
+      webrick
     jasmine-core (3.99.0)
     jsmin (1.0.1)
     kgio (2.11.4)
@@ -128,6 +129,7 @@ GEM
     unicorn (6.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    webrick (1.8.1)
     zeitwerk (2.6.12)
 
 PLATFORMS
